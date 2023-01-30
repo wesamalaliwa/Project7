@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5eceae39548447aab477cf0c92ca5307" Name="Diagram1">
+        <EntityTypeShape EntityType="gymdbModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.AspNetRole" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.AspNetUser" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.Class" Width="1.5" PointX="11" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.Coach" Width="1.5" PointX="8.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.Comment" Width="1.5" PointX="5.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.Pause" Width="1.5" PointX="10.5" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.PromoCode" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.Subscription" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.SubscriptionsCustomer" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="gymdbModel.sysdiagram" Width="1.5" PointX="8.75" PointY="10.125" IsExpanded="true" />
+        <AssociationConnector Association="gymdbModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Comments__UserID__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Subscript__UserI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Classes__CoachID__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Pause__Subscript__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Subscript__Promo__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.FK__Subscript__Subsc__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="gymdbModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

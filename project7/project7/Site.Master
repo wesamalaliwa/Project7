@@ -1,0 +1,309 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="project7.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - GYM</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <style>
+        .hs-slider .hs-item {
+    height: 100vh !important;
+ 
+}
+    </style>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+         <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+    <form runat="server">
+
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <%--        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Application name</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Home</a></li>
+                        <li><a runat="server" href="~/About">About</a></li>
+                        <li><a runat="server" href="~/Contact">Contact</a></li>
+                    </ul>
+                    <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %> !</a></li>
+                                <li>
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                </li>
+                            </ul>
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>
+            </div>
+        </div>--%>
+        <!-- Page Preloder -->
+        <%-- <div id="preloder">
+        <div class="loader"></div>
+    </div>--%>
+
+        <!-- Offcanvas Menu Section Begin -->
+        <div class="offcanvas-menu-overlay"></div>
+        <div class="offcanvas-menu-wrapper">
+            <div class="canvas-close">
+                <i class="fa fa-close"></i>
+            </div>
+            <div class="canvas-search search-switch">
+                <i class="fa fa-search"></i>
+            </div>
+            <nav class="canvas-menu mobile-menu">
+                <ul>
+                    <li><a runat="server" href="~/">Home</a></li>
+                    <li><a runat="server" href="~/About">About</a></li>
+                    <li><a href="class-details.aspx">Classes</a></li>
+                    <li><a href="services.aspx">Services</a></li>
+                    <li><a href="team.aspx">Our Team</a></li>
+                    <li><a href="#">Pages</a>
+                        <ul class="dropdown">
+                            <li><a href="class-details.aspx">Classes timetable</a></li>
+                            <li><a href="bmi-calculator.aspx">Bmi calculate</a></li>
+                            <li><a href="team.aspx">Our team</a></li>
+                            <li><a href="blog.aspx">Our blog</a></li>
+                          
+                        </ul>
+                    </li>
+                    <li><a runat="server" href="Contact.aspx">Contact</a></li>
+                </ul>
+                
+            </nav>
+       
+        </div>
+        <!-- Offcanvas Menu Section End -->
+
+        <!-- Header Section Begin -->
+        <header class="header-section" style="position:fixed; padding-bottom:22px; background-color:rgba(0,0,0,0.7); ">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="logo">
+                            <a href="Default.aspx">
+                                <img src="img/lo-preview.png" style="width:45%;" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a runat="server" href="~/">Home</a></li>
+                    <li><a runat="server" href="~/About">About</a></li>
+                                <li><a href="class-details.aspx">Classes</a></li>
+                                <li><a href="../Contact.aspx">Contact</a></li>
+                              <%--  <li><a href="team.aspx">Our Team</a></li>--%>
+                                <li><a href="#">Pages</a>
+                                    <ul class="dropdown">
+                                        <li><a href="../About.aspx">About us</a></li>
+                                        <li><a href="../class-timetable.aspx">Classes timetable</a></li>
+                                        <li><a href="../bmi-calculator.aspx">Bmi calculate</a></li>
+                                        <li><a href="../team.aspx">Our team</a></li>
+                                      
+                                        <li><a href="../blog.aspx">Our blog</a></li>
+                                     
+
+                                    </ul>
+                                             <asp:LoginView runat="server" ViewStateMode="Disabled">
+                                    <AnonymousTemplate>
+                                     
+                                            <li><a runat="server" href="~/Account/Register">Register</a></li>
+                                            <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                  
+                                    </AnonymousTemplate>
+                                    <LoggedInTemplate>
+                                           
+                                      
+                                            <li><a runat="server" href="~/Account/Manage" title="Manage your account">Profile</a></li>
+                                            <li>
+                                                <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Logout" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                            </li>
+
+                                   
+                                    </LoggedInTemplate>
+                                </asp:LoginView>
+                                </li>
+                             <li><a runat="server" id="test" href="~/DashBoard/statistics.aspx" title="Manage your account" visible="false">Dashboard</a></li>
+
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+                <div class="canvas-open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <!-- Header End -->
+
+        <div class=" body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr />
+            <footer>
+
+                <!-- Footer Section Begin -->
+                <section class="footer-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="fs-about">
+                                    <div class="fa-logo">
+                                        <a href="#">
+                                            <img src="img/lo-preview.png" style="width:45%;" alt=""></a>
+                                    </div>
+                                    <p>
+                                        	
+ABOUT GYM AMMAN
+A membership to the conveniently located Gold’s Gym Amman gives you access to everything you need to transform your life: state-of-the-art amenities, a variety of classes tailored to your fitness needs, and the world’s best personal trainers. Browse the weekly class schedules for group workouts ranging from martial arts-inspired cardio classes to carefully paced foundational yoga sessions.
+                                    </p>
+                                    <div class="fa-social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa  fa-envelope-o"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6">
+                                <div class="fs-widget">
+                                    <h4>Useful links</h4>
+                                    <ul>
+                                        <li><a href="About.aspx">About</a></li>
+                                        <li><a href="blog.aspx">Blog</a></li>
+                                        <li><a href="class-details.aspx">Classes</a></li>
+                                        <li><a href="Contact.aspx">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-6">
+                                <div class="fs-widget">
+                                    <h4>Support</h4>
+                                    <ul>
+                                        <li><a href="Account\Login.aspx">Login</a></li>
+                                        <li><a href="#">My account</a></li>
+                                        <li><a href="#">Subscribe</a></li>
+                                        <li><a href="Contact.aspx">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="fs-widget">
+                                    <h4>Tips & Guides</h4>
+                                    <div class="fw-recent">
+                                        <h6><a href="services.aspx">Physical fitness may help prevent depression, anxiety</a></h6>
+                                    
+
+                                    </div>
+                                    <div class="fw-recent">
+                                        <h6><a href="services.aspx">Fitness: The best exercise to lose belly fat and tone up...</a></h6>
+                                   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <div class="copyright-text">
+                                    <p>
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                        Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                                        All rights reserved
+                                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Footer Section End -->
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
